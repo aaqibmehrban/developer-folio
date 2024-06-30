@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Add these styles to your global CSS if not using Tailwind */
+.pointer-events-none {
+    pointer-events: none;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .top-0 {
+    top: 0;
+  }
+  .left-0 {
+    left: 0;
+  }
+  .w-0 {
+    width: 0;
+  }
+  .h-0 {
+    height: 0;
+  }
+  .w-32 {
+    width: 8rem; /* Adjust size as needed */
+  }
+  .h-32 {
+    height: 8rem; /* Adjust size as needed */
+  }
+  .rounded-full {
+    border-radius: 9999px;
+  }
+  .bg-white {
+    background-color: white;
+  }
+  .opacity-50 {
+    opacity: 0.5;
+  }
+  .blur-xl {
+    filter: blur(20px); /* Adjust blur as needed */
+  }
+  
