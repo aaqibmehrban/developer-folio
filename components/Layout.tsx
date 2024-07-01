@@ -24,7 +24,7 @@ const skills = [
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen flex flex-col bg-custom-gradient">
-      <Header profileImage="/profile.jpg" />
+      <Header profileImage="/profile.png" />
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"

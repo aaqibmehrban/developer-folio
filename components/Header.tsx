@@ -17,14 +17,25 @@ const Header: React.FC<HeaderProps> = ({ profileImage }) => {
   return (
     <header className="bg-header-gradient rounded-custom-header-lg p-8 mx-4 my-6 flex justify-center items-center">
       <div className="flex items-center space-x-8">
-        <img
+        {/* <img
           src={profileImage}
           alt="Profile"
           className="w-48 h-48 rounded-full object-cover border-2 border-gray-300"
-        />
+        /> */}
+       <div className="relative w-48 h-48 rounded-full overflow-hidden bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 transition duration-300 hover:from-blue-500 hover:via-green-500 hover:to-yellow-500 p-1">
+        <div className="w-full h-full rounded-full bg-[#e7dfba] p-1">
+          <img
+            src={profileImage}
+            alt="Profile"
+            className="w-full h-full object-cover rounded-full transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+      </div>
+
+
         <div className="text-align-left">
           <h1 className="text-4xl font-bold text-white">Aaqib Mehrban</h1>
-          <p className="text-xl text-gray-300">FullStack GIS Engineer</p>
+          <p className="text-xl text-gray-300">FullStack Developer | GIS Engineer</p>
           <p className="text-gray-400 flex items-center">
             <FaMapMarkerAlt className="mr-2" /> Espoo, Finland
           </p>
