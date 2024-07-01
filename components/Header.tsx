@@ -1,8 +1,16 @@
 import React from 'react';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import DownloadButton from './DownloadButton';
 
 type HeaderProps = {
   profileImage: string;
+};
+
+const downloadCV = () => {
+  const link = document.createElement('a');
+  link.href = '/cv.pdf'; // Adjust the path if your PDF is located elsewhere
+  link.download = 'Aaqib_Mehrban_CV.pdf';
+  link.click();
 };
 
 const Header: React.FC<HeaderProps> = ({ profileImage }) => {
@@ -21,18 +29,26 @@ const Header: React.FC<HeaderProps> = ({ profileImage }) => {
             <FaMapMarkerAlt className="mr-2" /> Espoo, Finland
           </p>
           <div className="flex space-x-2 mt-2">
-            <button className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear">
-              Fiverr
-            </button>
-            <button className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear">
-              Upwork
-            </button>
-            <button className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear">
-              Hire Me for a Project
-            </button>
+          <a
+            href="https://calendly.com/rajaaaqib775/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear"
+          >
+            Book a Meeting
+          </a>
+          <DownloadButton />
+            <a
+            href="https://wa.me/+923419679543" // Replace `your_phone_number` with your actual phone number
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear inline-block"
+          >
+            Request a Service
+          </a>
           </div>
           <p className="mt-4 text-gray-300">
-            I build pixel-perfect, engaging, and accessible digital experiences.
+            I build pixel-perfect, engaging, and accessible digital GIS experiences.
           </p>
         </div>
       </div>

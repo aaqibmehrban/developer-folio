@@ -9,11 +9,11 @@ export function TabsDemo() {
       title: "About",
       value: "about",
       content: (
-        <div className="w-full h-full rounded-2xl p-10 text-xl md:text-2xl text-gray-300 bg-transparent transition-all duration-300 hover:bg-[#122B39] hover:text-[#2eb0cb]">
-          <p className="leading-relaxed">
+        <div className="w-full h-full rounded-2xl p-10 text-lg md:text-2xl text-gray-300 bg-transparent transition-all duration-300 hover:bg-[#122B39] hover:text-[#2eb0cb]">
+          <p className="leading-relaxed text-right">
             From the beginning of my academic journey in Geoinformatics Engineering at the National University of Sciences and Technology (NUST), I have been passionate about solving real-world problems through technology. My early foray into freelancing allowed me to work with over 100 clients globally, honing my skills in writing extensions for QGIS, data visualization, image processing, and structuring databases in PostgreSQL.
           </p>
-          <p className="leading-relaxed mt-4">
+          <p className="leading-relaxed mt-4 text-right">
             Fast-forward to today, and I have had the privilege of building software across various domains, including advertising, start-ups, large corporations, and digital product studios. Currently, as a Full Stack Developer, I lead a team in designing scalable and efficient products, leveraging advanced technologies to enhance performance and reduce maintenance costs.
           </p>
         </div>

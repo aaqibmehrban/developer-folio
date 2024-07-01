@@ -6,6 +6,7 @@ import { TabsDemo } from './TabsDemo'; // Adjust the import path as needed
 import LightEffect from './LightEffect'; // Import the new LightEffect component
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
+
 interface LayoutProps {
   children: ReactNode;
 }
