@@ -23,16 +23,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           fill="purple"
         />
         <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
-        <Spotlight
-          className="bottom-0 right-0 h-screen transform -translate-x-1/2 -translate-y-1/2"
-          fill="white"
-        />
       </div>
       <main className="flex-grow container mx-auto p-4">
         {children}
       </main>
       <Footer />
-      <LightEffect /> {/* Add the LightEffect component here */}
+      <LightEffect />
     </div>
   );
 };
