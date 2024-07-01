@@ -47,10 +47,30 @@ export function TabsData() {
       title: "Projects",
       value: "projects",
       content: (
-        <div className="w-full h-full rounded-2xl p-10 text-lg md:text-2xl text-gray-300 bg-transparent transition-all duration-300 hover:bg-[#122B39] hover:text-[#2eb0cb]">
-          <p className="leading-relaxed">
-            {projects}
-          </p>
+        <div className="w-full h-full rounded-2xl p-10 text-md md:text-1xl text-gray-300 bg-transparent transition-all duration-300">
+          <div className="space-y-8">
+            {projects.map((project, index) => (
+              <div key={index} className="p-4 rounded-lg border border-gray-700 hover:bg-[#122B39] hover:border-[#2eb0cb] transition-all duration-300">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{project.title} <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-[#2eb0cb]">↗</a></h3>
+                    <p className="mt-2 text-gray-300">{project.description}</p>
+                    {project.stars && (
+                      <p className="mt-2 text-gray-300">⭐ {project.stars}</p>
+                    )}
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {project.skills.map((skill, idx) => (
+                        <span key={idx} className="inline-block bg-gray-800 text-white px-3 py-1 rounded-full text-sm">{skill}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <img src={project.image} alt={project.title} className="rounded-lg shadow-md" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       ),
     },
@@ -58,7 +78,7 @@ export function TabsData() {
       title: "Posts",
       value: "posts",
       content: (
-        <div className="w-full h-full rounded-2xl p-10 text-lg md:text-2xl text-gray-300 bg-transparent transition-all duration-300 hover:bg-[#122B39] hover:text-[#2eb0cb]">
+        <div className="w-full h-full rounded-2xl p-10 text-md md:text-1xl text-gray-300 bg-transparent transition-all duration-300 hover:bg-[#122B39] hover:text-[#2eb0cb]">
           <p className="leading-relaxed">
             {posts}
           </p>

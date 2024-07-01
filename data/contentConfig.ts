@@ -3,11 +3,11 @@
 export const metaData = {
     title: "Aaqib Mehrban",
     description: "Developer Portfolio of Aaqib Mehrban",
-    image: "/web-icon.png",
+    image: "/images/logos/web-icon.png",
 }
 
 
-export const profileImage = "/profile.png"; // Adjust the path as needed
+export const profileImage = "/images/logos/profile.png"; 
 
 export const headerData = {
   name: "Aaqib Mehrban",
@@ -24,7 +24,7 @@ export const headerData = {
     },
     {
       text: "Download CV",
-      href: "/cv.pdf",
+      href: "/docs/cv.pdf",
       className: "inline-block shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear",
       isDownloadButton: true,
     },
@@ -112,9 +112,25 @@ export const experience = [
   }
 ];
 
-export const projects = `
-  Projects details...
-`;
+export const projects = [
+    {
+      title: "Web Developer Portfolio",
+      description: "An Elegant Web Developer Portfolio build using modern tech like Next, React, Tailwind CSS, Aceternity Components and Deployed with help of Vercel. ",
+      url: "https://github.com/aaqibmehrban/developer-folio",
+      stars: null,
+      skills: ["React", "Next","Tailwind CSS" ,"Aceternity UI", "Vercel"],
+      image: "/images/github-project/dev-folio.png",
+    },
+    {
+      title: "Reddit to Youtube Video Bot",
+      description: "A Desktop app that can automate the process of finding posts related to keyword on reddit and then create video and text-to-speech from it and upload on youtube.",
+      url: "https://github.com/aaqibmehrban/Automatic-Reddit-text-to-Video-Generator-and-youtube-uploader",
+      stars: "61",
+      skills: ["Python", "Selenium", "Praw API", "Google Translator"],
+      image: "/images/github-project/reddit-bot.webp",
+    },
+    // Add more projects here
+  ];
 
 export const posts = `
   Posts details...
