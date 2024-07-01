@@ -23,7 +23,7 @@ export function TabsDemo() {
       title: "Experience",
       value: "experience",
       content: (
-        <div className="w-full h-full rounded-2xl p-10 text- md:text-1xl text-gray-300 bg-transparent transition-all duration-300 hover:bg-[#122B39] hover:text-[#2eb0cb]">
+        <div className="w-full h-full rounded-2xl p-10 text-md md:text-1xl text-gray-300 bg-transparent transition-all duration-300 hover:bg-[#122B39] hover:text-[#2eb0cb]">
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-semibold text-white">2023 - 2024</h3>
@@ -59,7 +59,7 @@ export function TabsDemo() {
               <h3 className="text-2xl font-bold text-white">Full Stack Developer at Horizon Technologies</h3>
               <ul className="list-none mt-2 space-y-2">
                 <li>Worked as a junior dev for a large team, leading full-stack development and integrating modern UI and backend tech, on a project with a user base of around 10,000 users per day.</li>
-                <li>Implemented robust data processing and analysis pipelines, enhancing the platform's capabilities in handling and visualizing spatial data.</li>
+                <li>Implemented robust data processing and analysis pipelines, enhancing the platform&apos;s  capabilities in handling and visualizing spatial data.</li>
                 <li>Learned to work as a team and contributed to 3 big GIS projects of a company.</li>
               </ul>
               <div className="mt-4 flex flex-wrap gap-2">
