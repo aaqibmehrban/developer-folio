@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import Skills from '@/components/Skills';
 import Education from '@/components/Education';
-import SocialLinks from '@/components/SocialLinks';
 import { TabsData } from '@/components/TabsData';
 
 const Home = () => {

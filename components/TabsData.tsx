@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Tabs } from "@/components/ui/tabs";
-import { aboutText, experience, projects, posts } from "@/data/contentConfig";
+import { aboutText, experience, projects, posts, repoLink } from "@/data/contentConfig";
 
 export function TabsData() {
   const tabs = [
@@ -72,6 +72,11 @@ export function TabsData() {
                 </div>
               </div>
             ))}
+            <div className="mt-8">
+              <a href={repoLink} className="text-[#2eb0cb] hover:text-white transition duration-300">
+                View Github Repo List →
+              </a>
+            </div>
           </div>
         </div>
       ),
@@ -80,7 +85,7 @@ export function TabsData() {
       title: "Posts",
       value: "posts",
       content: (
-        <div className="w-full h-full rounded-2xl p-10 text-md md:text-1xl text-gray-300 bg-transparent transition-all duration-300">
+        <div className="w-full h-full rounded-2xl p-10 text-md md:text-1xl text-gray-300 bg-transparent transition-all duration-300 hover:bg-[#122B39] hover:text-[#2eb0cb]">
           <div className="space-y-8">
             {posts.map((post, index) => (
               <div key={index} className="p-4 rounded-lg border border-gray-700 hover:bg-[#122B39] hover:border-[#2eb0cb] transition-all duration-300">

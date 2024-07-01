@@ -117,6 +117,7 @@ export const projects = [
     // Add more projects here
   ];
 
+  export const repoLink = "https://github.com/aaqibmehrban?tab=repositories";
 
 export const posts = [
     {
