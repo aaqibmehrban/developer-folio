@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 
@@ -36,6 +36,38 @@ export const Tabs = ({
     setActive(tab);
     scrollToRef(refs.current[idx]);
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const tab = propTabs.find((t) => t.value === entry.target.id);
+            if (tab) {
+              setActive(tab);
+            }
+          }
+        });
+      },
+      { root: null, rootMargin: '0px', threshold: 0.5 }
+    );
+
+    refs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      if (refs.current) {
+        refs.current.forEach((ref) => {
+          if (ref) {
+            observer.unobserve(ref);
+          }
+        });
+      }
+    };
+  }, [refs, propTabs]);
 
   return (
     <>
@@ -79,6 +111,7 @@ export const Tabs = ({
         {propTabs.map((tab, idx) => (
           <div
             key={tab.value}
+            id={tab.value}
             ref={(el) => {
               refs.current[idx] = el;
             }}

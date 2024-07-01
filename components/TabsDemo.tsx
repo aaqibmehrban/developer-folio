@@ -26,7 +26,7 @@ export function TabsDemo() {
         <div className="w-full h-full rounded-2xl p-10 text- md:text-1xl text-gray-300 bg-transparent transition-all duration-300 hover:bg-[#122B39] hover:text-[#2eb0cb]">
           <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-semibold text-white">2023 – 2024</h3>
+              <h3 className="text-xl font-semibold text-white">2023 - 2024</h3>
               <h3 className="text-2xl font-bold text-white">Full Stack Developer at Fornax Technologies</h3>
               <ul className="list-none mt-2 space-y-2">
                 <li>Led a team of 4 Developers, ensuring effective task management and client collaboration for timely, high-quality outputs.</li>
@@ -41,7 +41,7 @@ export function TabsDemo() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-white">2022 – 2023</h3>
+              <h3 className="text-xl font-semibold text-white">2022 - 2023</h3>
               <h3 className="text-2xl font-bold text-white">Python Developer at Marktpilot</h3>
               <ul className="list-none mt-2 space-y-2">
                 <li>Created 100+ web scrapers for real-time data collection, enriching product features with current information from diverse sources.</li>
@@ -55,7 +55,7 @@ export function TabsDemo() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-white">2021 – 2022</h3>
+              <h3 className="text-xl font-semibold text-white">2021 - 2022</h3>
               <h3 className="text-2xl font-bold text-white">Full Stack Developer at Horizon Technologies</h3>
               <ul className="list-none mt-2 space-y-2">
                 <li>Worked as a junior dev for a large team, leading full-stack development and integrating modern UI and backend tech, on a project with a user base of around 10,000 users per day.</li>
