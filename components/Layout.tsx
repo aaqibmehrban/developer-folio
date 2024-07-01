@@ -4,8 +4,9 @@ import Footer from './Footer';
 import { Spotlight } from '../components/ui/Spotlight';
 import { TabsDemo } from './TabsDemo'; // Adjust the import path as needed
 import LightEffect from './LightEffect'; // Import the new LightEffect component
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from 'react-icons/fa';
-
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaSquareXTwitter,FaSquareUpwork } from "react-icons/fa6";
+import { TbBrandFiverr } from "react-icons/tb";
 // Instead of page.tsx in app i put all components here which i have to fix
 
 interface LayoutProps {
@@ -89,14 +90,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <a href="https://www.linkedin.com/in/aaqibmehrban" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
                   <FaLinkedin size={36} />
                 </a>
-                <a href="https://twitter.com/your-username" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-                  <FaTwitter size={36} />
+                <a href="https://x.com/rajaaaqib775" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                  <FaSquareXTwitter size={36} />
                 </a>
                 <a href="https://instagram.com/aaqibmehrban" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
                   <FaInstagram size={36} />
                 </a>
                 <a href="mailto:rajaaaqib775@gmail.com" className="text-gray-300 hover:text-white">
                   <FaEnvelope size={36} />
+                </a>
+                <a href="https://fiverr.com/aaqibmehrban" className="text-gray-300 hover:text-white">
+                  <TbBrandFiverr size={36} />
+                </a>
+                <a href="https://www.upwork.com/freelancers/~0181468059aaa92204?mp_source=share" className="text-gray-300 hover:text-white">
+                  <FaSquareUpwork size={36} />
                 </a>
               </div>
             </div>
