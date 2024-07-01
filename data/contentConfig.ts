@@ -23,7 +23,7 @@ export const headerData = {
       isDownloadButton: false,
     },
     {
-      text: "Download CV",
+      text: "Download Resume",
       href: "/docs/cv.pdf",
       className: "inline-block shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear",
       isDownloadButton: true,
@@ -58,27 +58,12 @@ export const education = [
   },
 ];
 
-
-export const socialLinks = [
-    { href: "https://github.com/aaqibmehrban", icon: "FaGithub" },
-    { href: "https://www.linkedin.com/in/aaqibmehrban", icon: "FaLinkedin" },
-    { href: "https://x.com/rajaaaqib775", icon: "FaSquareXTwitter" },
-    { href: "https://instagram.com/aaqibmehrban", icon: "FaInstagram" },
-    { href: "mailto:rajaaaqib775@gmail.com", icon: "FaEnvelope" },
-    { href: "https://fiverr.com/aaqibmehrban", icon: "TbBrandFiverr" },
-    { href: "https://www.upwork.com/freelancers/~0181468059aaa92204?mp_source=share", icon: "FaSquareUpwork" },
+export const aboutText = [
+    "From an early age, I was a tech enthusiast, starting my first blog in 2012. My passion for technology led me to pursue a Bachelor's in Geoinformatics Engineering at NUST due to my interest in Spatial Technology and Computer Science.",
+    "During my academic journey, I freelanced, collaborating with over 100 clients globally and completing over 300 projects on Upwork and Fiverr. This experience honed my skills in Python, data visualization, creating dashboards, websites, and structuring databases in PostgreSQL.",
+    "Today, as a Full Stack Developer, I lead a team in designing scalable and efficient products across various domains. My diverse technical skill set ensures both front-end and back-end components of projects are optimized, scalable, and seamlessly integrated."
   ];
-
-export const aboutText = `
-  From the beginning of my academic journey in Geoinformatics Engineering at the National University of Sciences and Technology (NUST), 
-  I have been passionate about solving real-world problems through technology. My early foray into freelancing allowed me to work with over 
-  100 clients globally, honing my skills in writing extensions for QGIS, data visualization, image processing, and structuring databases in PostgreSQL.
-
-  Fast-forward to today, and I have had the privilege of building software across various domains, including advertising, start-ups, 
-  large corporations, and digital product studios. Currently, as a Full Stack Developer, I lead a team in designing scalable and efficient 
-  products, leveraging advanced technologies to enhance performance and reduce maintenance costs.
-`;
-
+  
 export const experience = [
   {
     date: "Jan 2023 - Jul 2023",
@@ -132,16 +117,29 @@ export const projects = [
     // Add more projects here
   ];
 
-export const posts = `
-  Posts details...
-`;
+
+export const posts = [
+    {
+      year: "July 11, 2023",
+      title: "How Appium is being used by Marketing Agencies to boost traffic",
+      url: "https://www.linkedin.com/pulse/how-appium-being-used-marketing-agencies-boost-traffic-aaqib-mehrban/",
+      thumbnail: "/images/posts/1.jpg"
+    },
+    {
+      year: "2019",
+      title: "Secure Your Python Code: Create a Trial Program to Protect Your Freelance Work",
+      url: "https://www.youtube.com/watch?v=cH_znxq2c-M",
+      thumbnail: "/images/posts/2.webp"
+    }
+  ];
+  
 
 
 export const footerData = {
     text: [
-      'Loosely designed in Figma and coded in Visual Studio Code by yours truly.',
-      'Built with Next.js and Tailwind CSS, deployed with Vercel.',
-      'All text is set in the Inter typeface.',
+      'Crafted with care in Figma and brought to life with Visual Studio Code.',
+      'Powered by Next.js and Tailwind CSS, hosted on Vercel.',
+      'Typography styled with the elegant Inter font.',
     ],
     socialLinks: [
       { href: 'https://github.com/aaqibmehrban', icon: 'FaGithub' },

@@ -11,9 +11,11 @@ export function TabsData() {
       value: "about",
       content: (
         <div className="w-full h-full rounded-2xl p-10 text-md md:text-1xl text-gray-300 bg-transparent transition-all duration-300 hover:bg-[#122B39] hover:text-[#2eb0cb]">
-          <p className="leading-relaxed">
-            {aboutText}
-          </p>
+          {aboutText.map((paragraph, index) => (
+            <p key={index} className="leading-relaxed mb-4">
+              {paragraph}
+            </p>
+          ))}
         </div>
       ),
     },
@@ -78,10 +80,24 @@ export function TabsData() {
       title: "Posts",
       value: "posts",
       content: (
-        <div className="w-full h-full rounded-2xl p-10 text-md md:text-1xl text-gray-300 bg-transparent transition-all duration-300 hover:bg-[#122B39] hover:text-[#2eb0cb]">
-          <p className="leading-relaxed">
-            {posts}
-          </p>
+        <div className="w-full h-full rounded-2xl p-10 text-md md:text-1xl text-gray-300 bg-transparent transition-all duration-300">
+          <div className="space-y-8">
+            {posts.map((post, index) => (
+              <div key={index} className="p-4 rounded-lg border border-gray-700 hover:bg-[#122B39] hover:border-[#2eb0cb] transition-all duration-300">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-lg font-regular text-white">{post.year}</h3>
+                    <a href={post.url} target="_blank" rel="noopener noreferrer" className="text-2xl font-bold text-white hover:text-[#2eb0cb]">
+                      {post.title}
+                    </a>
+                  </div>
+                  <div>
+                    <img src={post.thumbnail} alt={post.title} className="rounded-lg shadow-md" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       ),
     },

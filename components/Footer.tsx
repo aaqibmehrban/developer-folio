@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         {/* Right Column */}
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left text-gray-400">
           <p className="px-4">
             {text.map((line, index) => (
               <React.Fragment key={index}>
