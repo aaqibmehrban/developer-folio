@@ -20,7 +20,7 @@ const LightEffect = () => {
     <div
       className="pointer-events-none fixed top-0 left-0 w-0 h-0"
       style={{
-        transform: `translate(${position.x - 50}px, ${position.y - 50}px)`,
+        transform: `translate(${position.x - 160}px, ${position.y - 160}px)`,
       }}
     >
       <div className="w-80 h-80 rounded-full bg-[#2596be] opacity-20 blur-3xl"></div>
