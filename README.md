@@ -1,7 +1,3 @@
-Sure, here's the updated README with the new section on how to add data to `contentConfig.ts`:
-
----
-
 # DEV-NEXT-FOLIO
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
