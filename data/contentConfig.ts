@@ -65,6 +65,16 @@ export const aboutText = [
   ];
   
 export const experience = [
+    {
+    date: "July 2024 - Present",
+    position: "Software Engineer at Make A BIM",
+    responsibilities: [
+      "Design,implement software applications, and analyse user requirements",
+      "Improve overall infrastructure of Company's base product.",
+      "Create Pipelines for effective flow of data between multiple modules of company's product."
+    ],
+    skills: ["Python", "JavaScript", "Image Processing","Machine Learning"]
+  },
   {
     date: "Jan 2023 - Jul 2023",
     position: "Full Stack Developer at Fornax Technologies",
