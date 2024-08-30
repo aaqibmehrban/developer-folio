@@ -5,7 +5,7 @@ import React from 'react';
 const DownloadButton: React.FC = () => {
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/cv.pdf'; // Adjust the path if your PDF is located elsewhere
+    link.href = '/docs/cv.pdf'; // Adjust the path if your PDF is located elsewhere
     link.download = 'Aaqib_Mehrban_CV.pdf';
     link.click();
   };
