@@ -134,7 +134,14 @@ image:"/images/github-project/hospital.png"
 
 export const repoLink="https://github.com/aaqibmehrban?tab=repositories";
 
-export const posts=[];
+export type Post = {
+title: string;
+url: string;
+year: string;
+thumbnail: string;
+};
+
+export const posts: Post[] = [];
 
 export const footerData={
 text:[
