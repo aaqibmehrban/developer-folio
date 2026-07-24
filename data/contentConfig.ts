@@ -53,14 +53,20 @@ export const aboutText=[
 "I enjoy taking ideas from research into scalable products by building machine learning pipelines, cloud infrastructure and modern web applications."
 ];
 
+export const focusAreas = [
+  "Machine Learning",
+  "Computer Vision",
+  "Full-Stack Development",
+  "GIS & BIM",
+];
+
 export type Experience = {
   company: string;
   position: string;
   employmentType: string;
   dateRange: string;
   location: string;
-  summary: string;
-  responsibilities: string[];
+  narrative: string;
   skills: string[];
 };
 
@@ -71,21 +77,8 @@ export const experience: Experience[] = [
     employmentType: "Full-time",
     dateRange: "Jul 2024 - Present",
     location: "Helsinki, Uusimaa, Finland · Hybrid",
-    summary:
-      "Joined Make a BIM during its early growth phase and have played a key role in designing, developing, and scaling AI-powered solutions across the entire technology stack.",
-    responsibilities: [
-      "Built the company's first web application from scratch using Next.js, React, Tailwind CSS, and BIM/IFC technologies.",
-      "Developed scalable backend services and APIs using Python and Flask.",
-      "Conducted R&D in computer vision and point cloud processing for BIM applications.",
-      "Designed and implemented the complete ML pipeline, including dataset preparation, preprocessing, augmentation, training, evaluation, and deployment.",
-      "Developed and continuously improved production instance segmentation models, delivering 20+ model releases and increasing overall model performance to 74%.",
-      "Improved raster-to-vector floor plan conversion accuracy by approximately 40% through AI-driven automation and post-processing techniques.",
-      "Optimized backend processing pipelines, reducing processing time by up to 4× through algorithmic and infrastructure improvements.",
-      "Built the second-generation web platform from scratch with a redesigned UI, authentication, user management, and payment integration.",
-      "Designed database architecture and managed production infrastructure on Google Cloud Platform, including virtual machines, Artifact Registry, Docker, background workers, and cloud services.",
-      "Automated CI/CD pipelines, reviewed and merged code through GitLab, and streamlined deployment workflows.",
-      "Collaborated with architects, product stakeholders, and engineering teams to transform research into production-ready AI solutions.",
-    ],
+    narrative:
+      "Joined Make a BIM during its early growth phase and helped build the company's technology stack end to end, from its first Next.js and React web application to a redesigned second-generation platform with authentication, user management, and payment integration. On the machine learning side, I designed and owned the complete pipeline — data preparation, augmentation, training, evaluation, and deployment — shipping over 20 production instance segmentation model releases that lifted performance to 74% and improved raster-to-vector floor plan conversion accuracy by roughly 40%. I also optimized backend processing pipelines for up to a 4x speedup, architected the production database and Google Cloud infrastructure, including virtual machines, Artifact Registry, Docker, and background workers, and automated CI/CD through GitLab. Throughout, I worked closely with architects, product stakeholders, and engineers to turn research prototypes into reliable, production-ready AI solutions.",
     skills: ["Python","Flask","React","Next.js","TypeScript","Tailwind CSS","PyTorch","OpenCV","TensorFlow","Computer Vision","Instance Segmentation","Machine Learning","MLOps","Docker","GitLab CI/CD","Google Cloud Platform","PostgreSQL","IFC","BIM","Point Cloud Processing","REST APIs"],
   },
   {
@@ -94,14 +87,8 @@ export const experience: Experience[] = [
     employmentType: "Full-time",
     dateRange: "Jan 2023 - Jul 2023",
     location: "Islamabad, Pakistan · On-site",
-    summary:
-      "Served as technical lead for a 4-person engineering team, owning delivery from client requirements through production launch.",
-    responsibilities: [
-      "Led a cross-functional engineering team of 4 (2 backend engineers, 1 frontend engineer, 1 UI/UX designer), streamlining task allocation and cross-functional collaboration.",
-      "Served as the primary technical contact for clients, translating business requirements into actionable technical specifications and delivering 10+ full-lifecycle projects from concept to production deployment.",
-      "Contributed directly to both frontend and backend development alongside the team to unblock engineers, resolve complex technical hurdles, and accelerate project delivery timelines.",
-      "Established company-wide code review processes and development guidelines, improving overall code quality, system performance, and long-term maintainability.",
-    ],
+    narrative:
+      "As technical lead for a four-person engineering team, I owned delivery from client requirements through production launch at Fornax Technologies. I served as the primary technical point of contact for clients, translating business needs into actionable specifications and shepherding more than 10 full-lifecycle projects from concept to deployment. Alongside leading the team, I contributed directly to both frontend and backend development to unblock engineers, resolve tricky technical issues, and keep delivery timelines on track. I also established the company's first formal code review process and development guidelines, raising code quality, system performance, and long-term maintainability across every project the team shipped.",
     skills: ["Python","React","Node.js","Twilio","REST APIs","Team Leadership","Client Management","Code Review"],
   },
   {
@@ -110,13 +97,8 @@ export const experience: Experience[] = [
     employmentType: "Part-time",
     dateRange: "Jun 2022 - Dec 2022",
     location: "Remote",
-    summary:
-      "Remote Python developer building large-scale web scraping and ETL infrastructure for real-time product data.",
-    responsibilities: [
-      "Created 100+ web scrapers for real-time data collection, enriching product features with current information from diverse sources.",
-      "Optimized an ETL data pipeline in Python, accelerating data analysis with improved accuracy and speed.",
-      "Authored detailed documentation for web scrapers and data tools, enhancing usability and maintenance.",
-    ],
+    narrative:
+      "As a remote Python developer for MARKT-PILOT, I built and maintained large-scale web scraping and ETL infrastructure to keep product data current in real time. I authored more than 100 scrapers pulling data from a wide range of sources to enrich product listings, and optimized the underlying ETL pipeline for faster, more accurate downstream analysis. Alongside the engineering work, I documented the scraping tools and data workflows in detail, making the system easier for the wider team to use, extend, and maintain.",
     skills: ["Python","Web Scraping","ETL","Software Testing","Automation","Data Pipelines"],
   },
   {
@@ -125,15 +107,8 @@ export const experience: Experience[] = [
     employmentType: "Full-time",
     dateRange: "Jan 2021 - May 2022",
     location: "Islamabad, Pakistan · Hybrid",
-    summary:
-      "Built an end-to-end defense insights dashboard from scratch, combining full-stack engineering with geospatial analytics and computer vision for real-time monitoring.",
-    responsibilities: [
-      "Built a high-value defense insights dashboard from scratch, enabling real-time monitoring and geospatial analytics for warships and ground radar using satellite imagery.",
-      "Sourced open-source satellite imagery to train, test, and evaluate multiple computer vision models for object classification, writing custom inference scripts to integrate models directly into the web application.",
-      "Developed and optimized scalable data processing pipelines to clean, analyze, and visualize high-resolution spatial datasets and radar data for 10,000+ daily active users.",
-      "Built Land Use / Land Cover (LULC) classification tools, combining modern web frameworks with GIS software to process complex satellite and vector data.",
-      "Collaborated in a cross-functional engineering team using Git-based workflows, participating in code reviews, sprint planning, and large-scale feature deployments.",
-    ],
+    narrative:
+      "At Horizon Technology I built a high-value defense insights dashboard from the ground up, combining full-stack engineering with geospatial analytics for real-time monitoring of warships and ground radar via satellite imagery. I sourced open-source satellite imagery to train, test, and evaluate several computer vision models for object classification, then wrote the custom inference scripts that integrated them directly into the web application. I developed and optimized scalable data processing pipelines to clean, analyze, and visualize high-resolution spatial and radar datasets for over 10,000 daily active users, and built Land Use / Land Cover classification tools that paired modern web frameworks with GIS software for complex satellite and vector data. Throughout, I worked in a cross-functional engineering team following Git-based workflows, participating in code reviews, sprint planning, and large-scale feature deployments.",
     skills: ["Python","React","Express","Computer Vision","GIS","Remote Sensing","PostGIS","Spatial Analysis","Git"],
   },
   {
@@ -142,13 +117,8 @@ export const experience: Experience[] = [
     employmentType: "Internship",
     dateRange: "May 2020 - Aug 2020",
     location: "Islamabad, Pakistan · On-site",
-    summary:
-      "Interned with Pakistan's national disaster management agency, applying satellite remote sensing to nationwide flood monitoring and disaster response.",
-    responsibilities: [
-      "Processed and analyzed multi-temporal satellite imagery to map, monitor, and assess nationwide flood extent and spatial progression across Pakistan.",
-      "Generated high-resolution flood extent maps and historical flood pattern assessments to support rapid disaster response, risk reduction, and mitigation planning.",
-      "Ingested, cleaned, and integrated spatial data streams (optical and SAR imagery) into disaster management workflows to improve automated water body extraction and inundation analysis.",
-    ],
+    narrative:
+      "During my internship with Pakistan's National Disaster Management Authority, I applied satellite remote sensing to nationwide flood monitoring and disaster response. I processed and analyzed multi-temporal satellite imagery to map and monitor flood extent and its spatial progression across the country, producing high-resolution flood maps and historical pattern assessments that supported rapid response, risk reduction, and mitigation planning. I also ingested, cleaned, and integrated optical and SAR imagery into disaster management workflows, improving automated water body extraction and inundation analysis for the wider team.",
     skills: ["GIS","Remote Sensing","Python","Satellite Imagery Analysis"],
   },
 ];
@@ -169,6 +139,14 @@ export type Project = {
   stars?: string | null;
   image?: string;
   featured?: boolean;
+  gallery?: GalleryItem[];
+};
+
+export type GalleryItem = {
+  title: string;
+  type: "pdf" | "image";
+  src: string;
+  description?: string;
 };
 
 export const projects: Project[] = [
@@ -184,6 +162,9 @@ export const projects: Project[] = [
       "An AI based SaaS which converts orthographic floorplan drawings into 3D BIM models, combining computer vision, instance segmentation and IFC generation into a single production pipeline.",
     ],
     skills: ["Full-Stack Development","IFC","Next.js","Python","Machine Learning","Computer Vision","PostgreSQL","Google Cloud"],
+    url: "https://makeabim.com",
+    urlLabel: "Visit Site",
+    image: "/images/project/makeabim/createbim.png",
     featured: true,
   },
   {
@@ -217,7 +198,9 @@ export const projects: Project[] = [
       "Designed with a strict real-data-only principle: no fabricated or synthetic data is ever shown; gaps are reported honestly. Deployed on Vercel with zero environment variables or API keys.",
     ],
     skills: ["Next.js","TypeScript","REST APIs","OpenSky API","Open-Meteo","OpenStreetMap / Overpass","Linear Programming Optimization"],
-    image: "/images/github-project/aerotactic.png",
+    url: "https://aero-tactic.vercel.app/",
+    urlLabel: "Visit Site",
+    image: "/images/project/aerotactic/aerotactic.png",
     featured: true,
   },
   {
@@ -243,8 +226,49 @@ export const projects: Project[] = [
     skills: ["Python","GIS","Geospatial Data Processing","Routing Algorithms","Spatial Analysis","Emissions Modelling","Data Visualization"],
     url: "https://aaltodoc.aalto.fi/items/31c026a3-04e3-401c-836b-4156bdb69610",
     urlLabel: "Read Thesis",
-    image: "/images/posts/carbon-analysis.png",
+    image: "/images/project/thesis/carbon-analysis.png",
     featured: true,
+  },
+  {
+    slug: "cartography",
+    title: "Cartography & Map Visualizations",
+    dateRange: "2019 – 2021",
+    year: "2019–2021",
+    sortYear: 2021,
+    madeAt: "Personal Project",
+    description: "A personal collection of cartographic maps and geospatial visualizations, from historical border and conflict mapping to disaster and forest-cover analysis.",
+    fullDescription: [
+      "A collection of cartographic work produced alongside my GIS studies, spanning historical map reconstruction, disaster response mapping, and remote sensing-based land analysis.",
+      "Each map below is viewable directly in the browser — select any item to open it in an in-page viewer rather than downloading a file.",
+    ],
+    skills: ["GIS","Cartography","QGIS","ArcGIS Pro","Remote Sensing","Spatial Analysis"],
+    featured: true,
+    gallery: [
+      {
+        title: "Bombing Missions of the Vietnam War",
+        type: "image",
+        src: "/cartography/Bombing%20missions%20of%20the%20Vietnam_1.png",
+        description: "Cartographic visualization of historical bombing mission data over Vietnam.",
+      },
+      {
+        title: "Pakistan Flood Situation Map (2015)",
+        type: "pdf",
+        src: "/cartography/Flood%20Situation%20Map%20Pakistan%202015.pdf",
+        description: "Flood extent and situational mapping for Pakistan's 2015 flood season.",
+      },
+      {
+        title: "Pakistan–India Border Mapping (1947)",
+        type: "pdf",
+        src: "/cartography/pakistan%20india%201947%20border%20mapping.pdf",
+        description: "Historical cartographic reconstruction of the 1947 Pakistan–India border demarcation.",
+      },
+      {
+        title: "Shangla Forest Detection",
+        type: "pdf",
+        src: "/cartography/shangla_forest_detection.pdf",
+        description: "Forest cover detection and analysis mapping for the Shangla region.",
+      },
+    ],
   },
   {
     slug: "developer-folio",
@@ -261,6 +285,7 @@ export const projects: Project[] = [
     skills: ["Next.js","React","TypeScript","Tailwind CSS"],
     url: "https://aaqibmehrban.dev",
     urlLabel: "Visit Site",
+    image: "/images/project/dev-folio/dev-folio.png",
     featured: false,
   },
   {
@@ -309,6 +334,7 @@ export const projects: Project[] = [
       "Applied spatial analysis techniques including feature extraction, buffering, and zonal statistics to associate vegetation health indicators with individual detected trees.",
     ],
     skills: ["Deep Learning","ArcGIS Pro","Remote Sensing","GIS"],
+    image: "/images/project/palm-tree/training_samples_coconut.png",
     featured: false,
   },
   {
@@ -334,7 +360,7 @@ export const projects: Project[] = [
     stars: "73",
     url: "https://github.com/aaqibmehrban/Automatic-Reddit-text-to-Video-Generator-and-youtube-uploader",
     urlLabel: "View on GitHub",
-    image: "/images/github-project/reddit-bot.webp",
+    image: "/images/project/redit-bot/reddit-bot.png",
     featured: true,
   },
   {
@@ -370,17 +396,6 @@ export const archivedProjects = [...projects].sort((a, b) => b.sortYear - a.sort
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug);
 }
-
-export const repoLink="https://github.com/aaqibmehrban?tab=repositories";
-
-export type Post = {
-title: string;
-url: string;
-year: string;
-thumbnail: string;
-};
-
-export const posts: Post[] = [];
 
 export const footerData={
 text:[

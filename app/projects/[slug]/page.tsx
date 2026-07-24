@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import ProjectThumb from "@/components/ProjectThumb";
+import MediaGallery from "@/components/MediaGallery";
 import { archivedProjects, getProjectBySlug, metaData } from "@/data/contentConfig";
 
 type ProjectPageProps = {
@@ -56,19 +57,28 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           )}
         </div>
 
-        <div className="mt-8">
-          <ProjectThumb
-            image={project.image}
-            title={project.title}
-            className="rounded-xl shadow-lg w-full max-h-[420px] min-h-[220px] object-cover"
-          />
-        </div>
+        {!project.gallery && (
+          <div className="mt-8">
+            <ProjectThumb
+              image={project.image}
+              title={project.title}
+              className="rounded-xl shadow-lg w-full max-h-[420px] min-h-[220px] object-cover"
+            />
+          </div>
+        )}
 
         <div className="mt-8 space-y-4 text-gray-300 leading-relaxed">
           {project.fullDescription.map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
           ))}
         </div>
+
+        {project.gallery && project.gallery.length > 0 && (
+          <div className="mt-8">
+            <h2 className="text-xl font-bold text-white mb-4">Maps</h2>
+            <MediaGallery items={project.gallery} />
+          </div>
+        )}
 
         {project.highlights && project.highlights.length > 0 && (
           <div className="mt-8">
