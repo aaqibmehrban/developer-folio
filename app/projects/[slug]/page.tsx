@@ -75,7 +75,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
         {project.gallery && project.gallery.length > 0 && (
           <div className="mt-8">
-            <h2 className="text-xl font-bold text-white mb-4">Maps</h2>
+            <h2 className="text-xl font-bold text-white mb-4">Gallery</h2>
             <MediaGallery items={project.gallery} />
           </div>
         )}

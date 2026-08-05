@@ -24,6 +24,7 @@ export const Tabs = ({
   contentClassName?: string;
 }) => {
   const refs = useRef<(HTMLDivElement | null)[]>([]);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const [active, setActive] = useState<Tab>(propTabs[0]);
 
   const scrollToRef = (ref: HTMLDivElement | null) => {
@@ -38,18 +39,31 @@ export const Tabs = ({
   };
 
   useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    // Sections can be much taller than the scroll container, so a target may
+    // never cover 50% of it. Instead, shrink the observed area down to a thin
+    // band near the top of the container and track whichever section's top
+    // has most recently crossed into it.
+    const visible = new Set<string>();
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const tab = propTabs.find((t) => t.value === entry.target.id);
-            if (tab) {
-              setActive(tab);
-            }
+            visible.add(entry.target.id);
+          } else {
+            visible.delete(entry.target.id);
           }
         });
+
+        const current = [...propTabs].reverse().find((t) => visible.has(t.value));
+        if (current) {
+          setActive(current);
+        }
       },
-      { root: null, rootMargin: '0px', threshold: 0.5 }
+      { root: container, rootMargin: '0px 0px -65% 0px', threshold: 0 }
     );
 
     refs.current.forEach((ref) => {
@@ -59,13 +73,7 @@ export const Tabs = ({
     });
 
     return () => {
-      if (refs.current) {
-        refs.current.forEach((ref) => {
-          if (ref) {
-            observer.unobserve(ref);
-          }
-        });
-      }
+      observer.disconnect();
     };
   }, [refs, propTabs]);
 
@@ -107,7 +115,11 @@ export const Tabs = ({
           </button>
         ))}
       </div>
-      <div className={cn("w-full h-full overflow-y-auto hide-scrollbar", contentClassName)} style={{ maxHeight: "800px" }}>
+      <div
+        ref={containerRef}
+        className={cn("w-full h-full overflow-y-auto hide-scrollbar", contentClassName)}
+        style={{ maxHeight: "800px" }}
+      >
         {propTabs.map((tab, idx) => (
           <div
             key={tab.value}
